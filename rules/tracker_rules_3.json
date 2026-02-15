@@ -182055,7 +182055,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cxrfns.gu-global.com^",
+      "urlFilter": "||cxqnxnrcfrll.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182076,7 +182076,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cxrptu.danland.dk^",
+      "urlFilter": "||cxrfns.gu-global.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182097,7 +182097,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cxrvilfjtbwxy.store^",
+      "urlFilter": "||cxrptu.danland.dk^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182118,7 +182118,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cxsaev.stratiaskin.com^",
+      "urlFilter": "||cxrvilfjtbwxy.store^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182139,7 +182139,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cxslvetwblphg.site^",
+      "urlFilter": "||cxsaev.stratiaskin.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182160,7 +182160,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cxuapz.xyz^",
+      "urlFilter": "||cxslvetwblphg.site^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182181,7 +182181,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cxvsermlepcod.site^",
+      "urlFilter": "||cxuapz.xyz^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182202,7 +182202,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cxvuaexnqejex.site^",
+      "urlFilter": "||cxvsermlepcod.site^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182223,7 +182223,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cxwdgmldczxwa.website^",
+      "urlFilter": "||cxvuaexnqejex.site^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182244,7 +182244,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cxwisl.jetstereo.com^",
+      "urlFilter": "||cxwdgmldczxwa.website^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182265,7 +182265,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cxwqiasb.com^",
+      "urlFilter": "||cxwisl.jetstereo.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182286,7 +182286,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cxwwphrswjedj.online^",
+      "urlFilter": "||cxwqiasb.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182307,7 +182307,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cxyilbdocnfsi.space^",
+      "urlFilter": "||cxwwphrswjedj.online^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182328,7 +182328,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cxyrrnttklcwq.online^",
+      "urlFilter": "||cxyilbdocnfsi.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182349,7 +182349,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cxztgrpsubvkt.online^",
+      "urlFilter": "||cxyrrnttklcwq.online^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182370,7 +182370,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cxzygwseuwnii.website^",
+      "urlFilter": "||cxztgrpsubvkt.online^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182391,7 +182391,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cy98g9wuwn0n.angularjs.poc.glenigan.com^",
+      "urlFilter": "||cxzygwseuwnii.website^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182412,7 +182412,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cya1t.net^",
+      "urlFilter": "||cy98g9wuwn0n.angularjs.poc.glenigan.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182433,7 +182433,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cya2.net^",
+      "urlFilter": "||cya1t.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182454,7 +182454,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyakhvxwafhsxyv.net^",
+      "urlFilter": "||cya2.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182475,7 +182475,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyan92010.com^",
+      "urlFilter": "||cyakhvxwafhsxyv.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182496,7 +182496,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cybba.solutions^",
+      "urlFilter": "||cyan92010.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182517,7 +182517,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyber-guard.me^",
+      "urlFilter": "||cybba.solutions^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182538,7 +182538,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyber-pages.att.com^",
+      "urlFilter": "||cyber-guard.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182559,7 +182559,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyber-tracking.att.com^",
+      "urlFilter": "||cyber-pages.att.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182580,7 +182580,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyber.boozallen.com^",
+      "urlFilter": "||cyber-tracking.att.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182601,7 +182601,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyberanalytics.nl^",
+      "urlFilter": "||cyber.boozallen.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182622,7 +182622,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyberbounty.com^",
+      "urlFilter": "||cyberanalytics.nl^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182643,7 +182643,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyberciti.biz^",
+      "urlFilter": "||cyberbounty.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182664,7 +182664,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyberdaily.au^",
+      "urlFilter": "||cyberciti.biz^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182685,7 +182685,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyberlink.pro^",
+      "urlFilter": "||cyberdaily.au^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182706,7 +182706,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cybernetentertainment.com^",
+      "urlFilter": "||cyberlink.pro^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182727,7 +182727,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cybernews.com^",
+      "urlFilter": "||cybernetentertainment.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182748,7 +182748,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyberprivacy.pro^",
+      "urlFilter": "||cybernews.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182769,7 +182769,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyberscoop.com^",
+      "urlFilter": "||cyberprivacy.pro^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182790,7 +182790,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyberscore.live^",
+      "urlFilter": "||cyberscoop.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182811,7 +182811,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cybkit.com^",
+      "urlFilter": "||cyberscore.live^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182832,7 +182832,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cybmas.com^",
+      "urlFilter": "||cybkit.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182853,7 +182853,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cybyhdinwmntx.site^",
+      "urlFilter": "||cybmas.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182874,7 +182874,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyclenews.com^",
+      "urlFilter": "||cybyhdinwmntx.site^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182895,7 +182895,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyclingflash.com^",
+      "urlFilter": "||cyclenews.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182916,7 +182916,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyclinghere.com^",
+      "urlFilter": "||cyclingflash.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182937,7 +182937,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyclingnews.com^",
+      "urlFilter": "||cyclinghere.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182958,7 +182958,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyclingstage.com^",
+      "urlFilter": "||cyclingnews.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -182979,7 +182979,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyclinguptodate.com^",
+      "urlFilter": "||cyclingstage.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183000,7 +183000,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyclonis.com^",
+      "urlFilter": "||cyclinguptodate.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183021,7 +183021,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyclopsdial.com^",
+      "urlFilter": "||cyclonis.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183042,7 +183042,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cycrtitiqxykp.space^",
+      "urlFilter": "||cyclopsdial.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183063,7 +183063,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cycuratedhi.com^",
+      "urlFilter": "||cycrtitiqxykp.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183084,7 +183084,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cydippespode.help^",
+      "urlFilter": "||cycuratedhi.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183105,7 +183105,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyeabs.luxyhair.com^",
+      "urlFilter": "||cydippespode.help^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183126,7 +183126,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyeitxjzgsmef.online^",
+      "urlFilter": "||cyeabs.luxyhair.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183147,7 +183147,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyetwkoxmijucj.net^",
+      "urlFilter": "||cyeitxjzgsmef.online^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183168,7 +183168,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyeu12yr4gzcv34km.rest^",
+      "urlFilter": "||cyetwkoxmijucj.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183189,7 +183189,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyf9.destinia.cl^",
+      "urlFilter": "||cyeu12yr4gzcv34km.rest^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183210,7 +183210,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyfiaeojxyrsu.space^",
+      "urlFilter": "||cyf9.destinia.cl^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183231,7 +183231,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cygixcmqugtaa.online^",
+      "urlFilter": "||cyfiaeojxyrsu.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183252,7 +183252,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cygnidunclose.cyou^",
+      "urlFilter": "||cygixcmqugtaa.online^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183273,7 +183273,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cygnus.com^",
+      "urlFilter": "||cygnidunclose.cyou^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183294,7 +183294,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyhanjealyojs.space^",
+      "urlFilter": "||cygnus.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183315,7 +183315,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyiihoobjuxlx.space^",
+      "urlFilter": "||cyhanjealyojs.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183336,7 +183336,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyiwijyv.com^",
+      "urlFilter": "||cyiihoobjuxlx.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183357,7 +183357,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyksmcjfyyxxu.rocks^",
+      "urlFilter": "||cyiwijyv.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183378,7 +183378,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyl9l3yfzj5kjpl92.cfd^",
+      "urlFilter": "||cyksmcjfyyxxu.rocks^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183399,7 +183399,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cylfakyhloppf.space^",
+      "urlFilter": "||cyl9l3yfzj5kjpl92.cfd^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183420,7 +183420,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cylindrical-good.pro^",
+      "urlFilter": "||cylfakyhloppf.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183441,7 +183441,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cylindrical-wave.com^",
+      "urlFilter": "||cylindrical-good.pro^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183462,7 +183462,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cylindricalintroduction.com^",
+      "urlFilter": "||cylindrical-wave.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183483,7 +183483,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cylosczapchgk.space^",
+      "urlFilter": "||cylindricalintroduction.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183504,7 +183504,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cylpowwowsreloan.cfd^",
+      "urlFilter": "||cylosczapchgk.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183525,7 +183525,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cylyaclfzkqrb.website^",
+      "urlFilter": "||cylpowwowsreloan.cfd^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183546,7 +183546,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cymbidseer.help^",
+      "urlFilter": "||cylyaclfzkqrb.website^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183567,7 +183567,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cymeneimpart.qpon^",
+      "urlFilter": "||cymbidseer.help^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183588,7 +183588,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cymoidalmida.qpon^",
+      "urlFilter": "||cymeneimpart.qpon^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183609,7 +183609,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cymuig.assem.nl^",
+      "urlFilter": "||cymoidalmida.qpon^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183630,7 +183630,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyndmhcpr.xyz^",
+      "urlFilter": "||cymuig.assem.nl^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183651,7 +183651,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cynem.xyz^",
+      "urlFilter": "||cyndmhcpr.xyz^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183672,7 +183672,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyntgd.anticipazionitv.it^",
+      "urlFilter": "||cynem.xyz^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183693,7 +183693,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cynzybmckvjxg.store^",
+      "urlFilter": "||cyntgd.anticipazionitv.it^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183714,7 +183714,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyogohljccozi.site^",
+      "urlFilter": "||cynzybmckvjxg.store^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183735,7 +183735,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyohmj.catawiki.com^",
+      "urlFilter": "||cyogohljccozi.site^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183756,7 +183756,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyosekggqbrqw.space^",
+      "urlFilter": "||cyohmj.catawiki.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183777,7 +183777,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyphershaskard.qpon^",
+      "urlFilter": "||cyosekggqbrqw.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183798,7 +183798,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cypresscaquet.qpon^",
+      "urlFilter": "||cyphershaskard.qpon^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183819,7 +183819,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyprus-mail.com^",
+      "urlFilter": "||cypresscaquet.qpon^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183840,7 +183840,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyprusshippingnews.com^",
+      "urlFilter": "||cyprus-mail.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183861,7 +183861,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cysclatowtdxq.website^",
+      "urlFilter": "||cyprusshippingnews.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183882,7 +183882,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cysodwprdoejs.online^",
+      "urlFilter": "||cysclatowtdxq.website^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183903,7 +183903,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cystousbuttery.cfd^",
+      "urlFilter": "||cysodwprdoejs.online^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183924,7 +183924,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cystprutoth.cfd^",
+      "urlFilter": "||cystousbuttery.cfd^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183945,7 +183945,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cystsredbird.cfd^",
+      "urlFilter": "||cystprutoth.cfd^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183966,7 +183966,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cytdmhahgvmur.fun^",
+      "urlFilter": "||cystsredbird.cfd^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -183987,7 +183987,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cytodegoitres.cyou^",
+      "urlFilter": "||cytdmhahgvmur.fun^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184008,7 +184008,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cytosthingedsuss.qpon^",
+      "urlFilter": "||cytodegoitres.cyou^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184029,7 +184029,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyuwkpkrxaiml.site^",
+      "urlFilter": "||cytosthingedsuss.qpon^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184050,7 +184050,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyvxfq.jennikayne.com^",
+      "urlFilter": "||cyuwkpkrxaiml.site^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184071,7 +184071,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyvzavjhmduqn.online^",
+      "urlFilter": "||cyvxfq.jennikayne.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184092,7 +184092,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyxexdscsaphd.space^",
+      "urlFilter": "||cyvzavjhmduqn.online^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184113,7 +184113,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyxylrlvpuwqa.website^",
+      "urlFilter": "||cyxexdscsaphd.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184134,7 +184134,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cyyjyatgzmmpt.online^",
+      "urlFilter": "||cyxylrlvpuwqa.website^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184155,7 +184155,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-anag.m-shop.me^",
+      "urlFilter": "||cyyjyatgzmmpt.online^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184176,7 +184176,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-babynabytek.m-shop.me^",
+      "urlFilter": "||cz-anag.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184197,7 +184197,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-babyplaza.m-shop.me^",
+      "urlFilter": "||cz-babynabytek.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184218,7 +184218,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-batteryimport.m-shop.me^",
+      "urlFilter": "||cz-babyplaza.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184239,7 +184239,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-business.vodafone.com^",
+      "urlFilter": "||cz-batteryimport.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184260,7 +184260,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-cassidi.m-shop.me^",
+      "urlFilter": "||cz-business.vodafone.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184281,7 +184281,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-countrylife.m-shop.me^",
+      "urlFilter": "||cz-cassidi.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184302,7 +184302,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-cz.siemensplmevents.com^",
+      "urlFilter": "||cz-countrylife.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184323,7 +184323,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-efitness.m-shop.me^",
+      "urlFilter": "||cz-cz.siemensplmevents.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184344,7 +184344,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-fightstore.m-shop.me^",
+      "urlFilter": "||cz-efitness.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184365,7 +184365,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-fitness007.m-shop.me^",
+      "urlFilter": "||cz-fightstore.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184386,7 +184386,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-go.experian.com^",
+      "urlFilter": "||cz-fitness007.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184407,7 +184407,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-grafficon.m-shop.me^",
+      "urlFilter": "||cz-go.experian.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184428,7 +184428,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-joealex.m-shop.me^",
+      "urlFilter": "||cz-grafficon.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184449,7 +184449,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-laznejupiter.m-shop.me^",
+      "urlFilter": "||cz-joealex.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184470,7 +184470,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-myhealth.m-shop.me^",
+      "urlFilter": "||cz-laznejupiter.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184491,7 +184491,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-newbag.m-shop.me^",
+      "urlFilter": "||cz-myhealth.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184512,7 +184512,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-nobilistilia.m-shop.me^",
+      "urlFilter": "||cz-newbag.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184533,7 +184533,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-originalstore.m-shop.me^",
+      "urlFilter": "||cz-nobilistilia.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184554,7 +184554,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-rekant.m-shop.me^",
+      "urlFilter": "||cz-originalstore.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184575,7 +184575,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-rychleleky.m-shop.me^",
+      "urlFilter": "||cz-rekant.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184596,7 +184596,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-sasoo.m-shop.me^",
+      "urlFilter": "||cz-rychleleky.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184617,7 +184617,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-scootshop.m-shop.me^",
+      "urlFilter": "||cz-sasoo.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184638,7 +184638,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-styx.m-shop.me^",
+      "urlFilter": "||cz-scootshop.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184659,7 +184659,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-tattoomania.m-shop.me^",
+      "urlFilter": "||cz-styx.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184680,7 +184680,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-topalkohol.m-shop.me^",
+      "urlFilter": "||cz-tattoomania.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184701,7 +184701,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-topgal.m-shop.me^",
+      "urlFilter": "||cz-topalkohol.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184722,7 +184722,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-trenyrkarna.m-shop.me^",
+      "urlFilter": "||cz-topgal.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184743,7 +184743,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-tropicliberec.m-shop.me^",
+      "urlFilter": "||cz-trenyrkarna.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184764,7 +184764,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cz-velkykosik.m-shop.me^",
+      "urlFilter": "||cz-tropicliberec.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184785,7 +184785,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czamfgpnexsxo.vip^",
+      "urlFilter": "||cz-velkykosik.m-shop.me^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184806,7 +184806,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czardomchicles.cfd^",
+      "urlFilter": "||czamfgpnexsxo.vip^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184827,7 +184827,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czarmishap.com^",
+      "urlFilter": "||czardomchicles.cfd^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184848,7 +184848,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czcmgagjthwgu.site^",
+      "urlFilter": "||czarmishap.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184869,7 +184869,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czdclraxaacmq.online^",
+      "urlFilter": "||czcmgagjthwgu.site^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184890,7 +184890,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czdxto.radiopopular.pt^",
+      "urlFilter": "||czdclraxaacmq.online^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184911,7 +184911,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czechicglouts.qpon^",
+      "urlFilter": "||czdxto.radiopopular.pt^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184932,7 +184932,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czechtheworld.com^",
+      "urlFilter": "||czechicglouts.qpon^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184953,7 +184953,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czeqgnnrivwmp.space^",
+      "urlFilter": "||czechtheworld.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184974,7 +184974,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czfjnuzzqmaoa.online^",
+      "urlFilter": "||czeqgnnrivwmp.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -184995,7 +184995,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czfjzpxdykhtz.space^",
+      "urlFilter": "||czfjnuzzqmaoa.online^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185016,7 +185016,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czfueamnlhlqq.space^",
+      "urlFilter": "||czfjzpxdykhtz.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185037,7 +185037,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czgacpadsspuj.space^",
+      "urlFilter": "||czfueamnlhlqq.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185058,7 +185058,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czh5aa.xyz^",
+      "urlFilter": "||czgacpadsspuj.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185079,7 +185079,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czhavjzsxkcwa.space^",
+      "urlFilter": "||czh5aa.xyz^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185100,7 +185100,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czhmgezchubno.space^",
+      "urlFilter": "||czhavjzsxkcwa.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185121,7 +185121,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czhplaacakpki.website^",
+      "urlFilter": "||czhmgezchubno.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185142,7 +185142,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czjvhfmpy.com^",
+      "urlFilter": "||czhplaacakpki.website^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185163,7 +185163,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czlkjrugmjgty.space^",
+      "urlFilter": "||czjvhfmpy.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185184,7 +185184,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czlytigsdousu.space^",
+      "urlFilter": "||czlkjrugmjgty.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185205,7 +185205,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czmehjnb.xyz^",
+      "urlFilter": "||czlytigsdousu.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185226,7 +185226,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cznfum.lumas.com^",
+      "urlFilter": "||czmehjnb.xyz^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185247,7 +185247,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cznjfnlosgkob.online^",
+      "urlFilter": "||cznfum.lumas.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185268,7 +185268,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cznluk.urbangymwear.co.uk^",
+      "urlFilter": "||cznjfnlosgkob.online^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185289,7 +185289,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cznratophrtou.website^",
+      "urlFilter": "||cznluk.urbangymwear.co.uk^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185310,7 +185310,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czofrrdmzszbd.site^",
+      "urlFilter": "||cznratophrtou.website^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185331,7 +185331,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czokcwkmkleuv.site^",
+      "urlFilter": "||czofrrdmzszbd.site^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185352,7 +185352,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czqtpkjueiffw.space^",
+      "urlFilter": "||czokcwkmkleuv.site^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185373,7 +185373,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czsk.sharpmarketing.eu^",
+      "urlFilter": "||czqtpkjueiffw.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185394,7 +185394,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czsttsmgndlni.website^",
+      "urlFilter": "||czsk.sharpmarketing.eu^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185415,7 +185415,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czsusasfoyqln.website^",
+      "urlFilter": "||czsttsmgndlni.website^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185436,7 +185436,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||cztmmijwxiafu.click^",
+      "urlFilter": "||czsusasfoyqln.website^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185457,7 +185457,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czujjs.crownandcaliber.com^",
+      "urlFilter": "||cztmmijwxiafu.click^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185478,7 +185478,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czuoez2prjpy8j.cfd^",
+      "urlFilter": "||czujjs.crownandcaliber.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185499,7 +185499,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czuvfumygnjwp.space^",
+      "urlFilter": "||czuoez2prjpy8j.cfd^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185520,7 +185520,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czvdlp.hgregoire.com^",
+      "urlFilter": "||czuvfumygnjwp.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185541,7 +185541,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czwgftuwfitha.space^",
+      "urlFilter": "||czvdlp.hgregoire.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185562,7 +185562,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czx5eyk0exbhwp43ya.biz^",
+      "urlFilter": "||czwgftuwfitha.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185583,7 +185583,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czxnozkdqlcrk.online^",
+      "urlFilter": "||czx5eyk0exbhwp43ya.biz^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185604,7 +185604,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||czxtnycchoexz.space^",
+      "urlFilter": "||czxnozkdqlcrk.online^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185625,7 +185625,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d-1.co^",
+      "urlFilter": "||czxtnycchoexz.space^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185646,7 +185646,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d-agency.net^",
+      "urlFilter": "||d-1.co^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185667,7 +185667,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d-app.progressive.com^",
+      "urlFilter": "||d-agency.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185688,7 +185688,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d-bi.fr^",
+      "urlFilter": "||d-app.progressive.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185709,7 +185709,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d-collect.jennifersoft.com^",
+      "urlFilter": "||d-bi.fr^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185730,7 +185730,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d-collector.jennifersoft.com^",
+      "urlFilter": "||d-collect.jennifersoft.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185751,7 +185751,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d-kint.d-kintetsu.co.jp^",
+      "urlFilter": "||d-collector.jennifersoft.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185772,7 +185772,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d-log.asahi.co.jp^",
+      "urlFilter": "||d-kint.d-kintetsu.co.jp^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185793,7 +185793,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d-log.tv-asahi.co.jp^",
+      "urlFilter": "||d-log.asahi.co.jp^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185814,7 +185814,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d-markets.net^",
+      "urlFilter": "||d-log.tv-asahi.co.jp^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185835,7 +185835,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d-snapshotapp.progressive.com^",
+      "urlFilter": "||d-markets.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185856,7 +185856,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d-staging.groc.press^",
+      "urlFilter": "||d-snapshotapp.progressive.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185877,7 +185877,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d-stats.com^",
+      "urlFilter": "||d-staging.groc.press^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185898,7 +185898,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.adlpo.com^",
+      "urlFilter": "||d-stats.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185919,7 +185919,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.adroll.com^",
+      "urlFilter": "||d.adlpo.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185940,7 +185940,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.analyticsmania.com^",
+      "urlFilter": "||d.adroll.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185961,7 +185961,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.cybtel.com^",
+      "urlFilter": "||d.analyticsmania.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -185982,7 +185982,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.delahorro.app^",
+      "urlFilter": "||d.cybtel.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186003,7 +186003,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.deloitte.fr^",
+      "urlFilter": "||d.delahorro.app^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186024,7 +186024,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.gif^",
+      "urlFilter": "||d.deloitte.fr^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186045,7 +186045,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.groc.press^",
+      "urlFilter": "||d.gif^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186066,7 +186066,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.haberler.com^",
+      "urlFilter": "||d.groc.press^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186087,7 +186087,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.jugnoo.in^",
+      "urlFilter": "||d.haberler.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186108,7 +186108,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.lilstts.com^",
+      "urlFilter": "||d.jugnoo.in^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186129,7 +186129,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.m-net.de^",
+      "urlFilter": "||d.lilstts.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186150,7 +186150,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.mail.levi.com^",
+      "urlFilter": "||d.m-net.de^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186171,7 +186171,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.nativendo.de^",
+      "urlFilter": "||d.mail.levi.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186192,7 +186192,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.omsnative.de^",
+      "urlFilter": "||d.nativendo.de^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186213,7 +186213,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.rcmd.jp^",
+      "urlFilter": "||d.omsnative.de^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186234,7 +186234,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.rp-online.de^",
+      "urlFilter": "||d.rcmd.jp^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186255,7 +186255,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.santemagazine.fr^",
+      "urlFilter": "||d.rp-online.de^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186276,7 +186276,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.seksohub.com^",
+      "urlFilter": "||d.santemagazine.fr^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186297,7 +186297,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.shareaholic.com^",
+      "urlFilter": "||d.seksohub.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186318,7 +186318,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.shopprecouriers.com^",
+      "urlFilter": "||d.shareaholic.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186339,7 +186339,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.skk.moe^",
+      "urlFilter": "||d.shopprecouriers.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186360,7 +186360,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.sondakika.com^",
+      "urlFilter": "||d.skk.moe^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186381,7 +186381,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.sourcepoint.capitalfm.com^",
+      "urlFilter": "||d.sondakika.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186402,7 +186402,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.stay-app.com^",
+      "urlFilter": "||d.sourcepoint.capitalfm.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186423,7 +186423,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.tv-asahi.co.jp^",
+      "urlFilter": "||d.stay-app.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186444,7 +186444,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.uni-medias.com^",
+      "urlFilter": "||d.tv-asahi.co.jp^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186465,7 +186465,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.whoscall.com^",
+      "urlFilter": "||d.uni-medias.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186486,7 +186486,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.wi-fi.ru^",
+      "urlFilter": "||d.whoscall.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186507,7 +186507,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d.xapcard.com^",
+      "urlFilter": "||d.wi-fi.ru^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186528,7 +186528,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d018b822d2.com^",
+      "urlFilter": "||d.xapcard.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186549,7 +186549,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d08l9a634.com^",
+      "urlFilter": "||d018b822d2.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186570,7 +186570,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d0d9f1bb4b.com^",
+      "urlFilter": "||d08l9a634.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186591,7 +186591,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d0main.ru^",
+      "urlFilter": "||d0d9f1bb4b.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186612,7 +186612,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d10ce3z4vbhcdd.cloudfront.net^",
+      "urlFilter": "||d0main.ru^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186633,7 +186633,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d10lpsik1i8c69.cloudfront.net^",
+      "urlFilter": "||d10ce3z4vbhcdd.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186654,7 +186654,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d10lumateci472.cloudfront.net^",
+      "urlFilter": "||d10lpsik1i8c69.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186675,7 +186675,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d10lv7w3g0jvk9.cloudfront.net^",
+      "urlFilter": "||d10lumateci472.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186696,7 +186696,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d10nkw6w2k1o10.cloudfront.net^",
+      "urlFilter": "||d10lv7w3g0jvk9.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186717,7 +186717,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d10wfab8zt419p.cloudfront.net^",
+      "urlFilter": "||d10nkw6w2k1o10.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186738,7 +186738,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d10zmv6hrj5cx1.cloudfront.net^",
+      "urlFilter": "||d10wfab8zt419p.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186759,7 +186759,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d114isgihvajcp.cloudfront.net^",
+      "urlFilter": "||d10zmv6hrj5cx1.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186780,7 +186780,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1180od816jent.cloudfront.net^",
+      "urlFilter": "||d114isgihvajcp.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186801,7 +186801,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1198dzygjftam.cloudfront.net^",
+      "urlFilter": "||d1180od816jent.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186822,7 +186822,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d11bdev7tcn7wh.cloudfront.net^",
+      "urlFilter": "||d1198dzygjftam.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186843,7 +186843,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d11enq2rymy0yl.cloudfront.net^",
+      "urlFilter": "||d11bdev7tcn7wh.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186864,7 +186864,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d11hjbdxxtogg5.cloudfront.net^",
+      "urlFilter": "||d11enq2rymy0yl.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186885,7 +186885,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d11kp34sgosvfa.cloudfront.net^",
+      "urlFilter": "||d11hjbdxxtogg5.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186906,7 +186906,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d11p7gi4d9x2s0.cloudfront.net^",
+      "urlFilter": "||d11kp34sgosvfa.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186927,7 +186927,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d11qytb9x1vnrm.cloudfront.net^",
+      "urlFilter": "||d11p7gi4d9x2s0.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186948,7 +186948,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d11tybz5ul8vel.cloudfront.net^",
+      "urlFilter": "||d11qytb9x1vnrm.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186969,7 +186969,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d11zevc9a5598r.cloudfront.net^",
+      "urlFilter": "||d11tybz5ul8vel.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -186990,7 +186990,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d126kahie2ogx0.cloudfront.net^",
+      "urlFilter": "||d11zevc9a5598r.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187011,7 +187011,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d127s3e8wcl3q6.cloudfront.net^",
+      "urlFilter": "||d126kahie2ogx0.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187032,7 +187032,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d12bql71awc8k.cloudfront.net^",
+      "urlFilter": "||d127s3e8wcl3q6.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187053,7 +187053,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d12czbu0tltgqq.cloudfront.net^",
+      "urlFilter": "||d12bql71awc8k.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187074,7 +187074,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d12dky1jzngacn.cloudfront.net^",
+      "urlFilter": "||d12czbu0tltgqq.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187095,7 +187095,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d12e9f83wyj0ww.cloudfront.net^",
+      "urlFilter": "||d12dky1jzngacn.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187116,7 +187116,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d12t7h1bsbq1cs.cloudfront.net^",
+      "urlFilter": "||d12e9f83wyj0ww.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187137,7 +187137,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d12tu1kocp8e8u.cloudfront.net^",
+      "urlFilter": "||d12t7h1bsbq1cs.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187158,7 +187158,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d12ylqdkzgcup5.cloudfront.net^",
+      "urlFilter": "||d12tu1kocp8e8u.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187179,7 +187179,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d12zgccgt6pwjz.cloudfront.net^",
+      "urlFilter": "||d12ylqdkzgcup5.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187200,7 +187200,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d133y3h5r255gq.cloudfront.net^",
+      "urlFilter": "||d12zgccgt6pwjz.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187221,7 +187221,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d13gni3sfor862.cloudfront.net^",
+      "urlFilter": "||d133y3h5r255gq.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187242,7 +187242,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d13j11nqjt0s84.cloudfront.net^",
+      "urlFilter": "||d13gni3sfor862.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187263,7 +187263,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d13k7prax1yi04.cloudfront.net^",
+      "urlFilter": "||d13j11nqjt0s84.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187284,7 +187284,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d13pxqgp3ixdbh.cloudfront.net^",
+      "urlFilter": "||d13k7prax1yi04.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187305,7 +187305,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d13r2gmqlqb3hr.cloudfront.net^",
+      "urlFilter": "||d13pxqgp3ixdbh.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187326,7 +187326,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d13uyjvmsvkesh.cloudfront.net^",
+      "urlFilter": "||d13r2gmqlqb3hr.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187347,7 +187347,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d13vul5n9pqibl.cloudfront.net^",
+      "urlFilter": "||d13uyjvmsvkesh.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187368,7 +187368,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d140sbu1b1m3h0.cloudfront.net^",
+      "urlFilter": "||d13vul5n9pqibl.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187389,7 +187389,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d141wsrw9m4as6.cloudfront.net^",
+      "urlFilter": "||d140sbu1b1m3h0.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187410,7 +187410,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d142i1hxvwe38g.cloudfront.net^",
+      "urlFilter": "||d141wsrw9m4as6.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187431,7 +187431,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d145ghnzqbsasr.cloudfront.net^",
+      "urlFilter": "||d142i1hxvwe38g.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187452,7 +187452,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d147t1kg3swfdd.cloudfront.net^",
+      "urlFilter": "||d145ghnzqbsasr.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187473,7 +187473,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d14821r0t3377v.cloudfront.net^",
+      "urlFilter": "||d147t1kg3swfdd.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187494,7 +187494,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d149mkdvjofx4v.cloudfront.net^",
+      "urlFilter": "||d14821r0t3377v.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187515,7 +187515,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d14l1tkufmtp1z.cloudfront.net^",
+      "urlFilter": "||d149mkdvjofx4v.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187536,7 +187536,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d14osandwrs90r.cloudfront.net^",
+      "urlFilter": "||d14l1tkufmtp1z.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187557,7 +187557,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d14pdm1b7fi5kh.cloudfront.net^",
+      "urlFilter": "||d14osandwrs90r.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187578,7 +187578,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d14x46ho6sn9yf.cloudfront.net^",
+      "urlFilter": "||d14pdm1b7fi5kh.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187599,7 +187599,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d14zhsq5aop7ap.cloudfront.net^",
+      "urlFilter": "||d14x46ho6sn9yf.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187620,7 +187620,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d154nw1c88j0q6.cloudfront.net^",
+      "urlFilter": "||d14zhsq5aop7ap.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187641,7 +187641,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d15bcy38hlba76.cloudfront.net^",
+      "urlFilter": "||d154nw1c88j0q6.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187662,7 +187662,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d15gt9gwxw5wu0.cloudfront.net^",
+      "urlFilter": "||d15bcy38hlba76.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187683,7 +187683,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d15jg7068qz6nm.cloudfront.net^",
+      "urlFilter": "||d15gt9gwxw5wu0.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187704,7 +187704,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d15kdpgjg3unno.cloudfront.net^",
+      "urlFilter": "||d15jg7068qz6nm.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187725,7 +187725,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d15kuuu3jqrln7.cloudfront.net^",
+      "urlFilter": "||d15kdpgjg3unno.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187746,7 +187746,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d15mt77nzagpnx.cloudfront.net^",
+      "urlFilter": "||d15kuuu3jqrln7.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187767,7 +187767,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d15skjf5hy9xr6.cloudfront.net^",
+      "urlFilter": "||d15mt77nzagpnx.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187788,7 +187788,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d15yg5thi9b6xv.cloudfront.net^",
+      "urlFilter": "||d15skjf5hy9xr6.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187809,7 +187809,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d162nnmwf9bggr.cloudfront.net^",
+      "urlFilter": "||d15yg5thi9b6xv.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187830,7 +187830,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d169bbxks24g2u.cloudfront.net^",
+      "urlFilter": "||d162nnmwf9bggr.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187851,7 +187851,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d16fk4ms6rqz1v.cloudfront.net^",
+      "urlFilter": "||d169bbxks24g2u.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187872,7 +187872,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d16hi2v1mh7lg7.cloudfront.net^",
+      "urlFilter": "||d16fk4ms6rqz1v.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187893,7 +187893,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d16saj1xvba76n.cloudfront.net^",
+      "urlFilter": "||d16hi2v1mh7lg7.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187914,7 +187914,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d16sobzswqonxq.cloudfront.net^",
+      "urlFilter": "||d16saj1xvba76n.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187935,7 +187935,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d170971757.com^",
+      "urlFilter": "||d16sobzswqonxq.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187956,7 +187956,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1733r3id7jrw5.cloudfront.net^",
+      "urlFilter": "||d170971757.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187977,7 +187977,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d175757719.com^",
+      "urlFilter": "||d1733r3id7jrw5.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -187998,7 +187998,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d175dtblugd1dn.cloudfront.net^",
+      "urlFilter": "||d175757719.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188019,7 +188019,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d17757b88bjr2y.cloudfront.net^",
+      "urlFilter": "||d175dtblugd1dn.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188040,7 +188040,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d17c5vf4t6okfg.cloudfront.net^",
+      "urlFilter": "||d17757b88bjr2y.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188061,7 +188061,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d17m68fovwmgxj.cloudfront.net^",
+      "urlFilter": "||d17c5vf4t6okfg.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188082,7 +188082,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d17razj7klcrmv.cloudfront.net^",
+      "urlFilter": "||d17m68fovwmgxj.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188103,7 +188103,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d183xvcith22ty.cloudfront.net^",
+      "urlFilter": "||d17razj7klcrmv.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188124,7 +188124,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1856n6bep9gel.cloudfront.net^",
+      "urlFilter": "||d183xvcith22ty.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188145,7 +188145,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d185vdnhi9xfbl.cloudfront.net^",
+      "urlFilter": "||d1856n6bep9gel.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188166,7 +188166,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d188elxamt3utn.cloudfront.net^",
+      "urlFilter": "||d185vdnhi9xfbl.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188187,7 +188187,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d188m5xxcpvuue.cloudfront.net^",
+      "urlFilter": "||d188elxamt3utn.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188208,7 +188208,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d18b5y9gp0lr93.cloudfront.net^",
+      "urlFilter": "||d188m5xxcpvuue.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188229,7 +188229,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d18e74vjvmvza1.cloudfront.net^",
+      "urlFilter": "||d18b5y9gp0lr93.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188250,7 +188250,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d18g6t7whf8ejf.cloudfront.net^",
+      "urlFilter": "||d18e74vjvmvza1.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188271,7 +188271,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d18hqfm1ev805k.cloudfront.net^",
+      "urlFilter": "||d18g6t7whf8ejf.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188292,7 +188292,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d18kg2zy9x3t96.cloudfront.net^",
+      "urlFilter": "||d18hqfm1ev805k.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188313,7 +188313,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d18mealirgdbbz.cloudfront.net^",
+      "urlFilter": "||d18kg2zy9x3t96.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188334,7 +188334,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d18myvrsrzjrd7.cloudfront.net^",
+      "urlFilter": "||d18mealirgdbbz.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188355,7 +188355,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d18p8z0ptb8qab.cloudfront.net^",
+      "urlFilter": "||d18myvrsrzjrd7.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188376,7 +188376,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d18ql5xgy7gz3p.cloudfront.net^",
+      "urlFilter": "||d18p8z0ptb8qab.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188397,7 +188397,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d18t35yyry2k49.cloudfront.net^",
+      "urlFilter": "||d18ql5xgy7gz3p.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188418,7 +188418,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d191y0yd6d0jy4.cloudfront.net^",
+      "urlFilter": "||d18t35yyry2k49.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188439,7 +188439,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d192g7g8iuw79c.cloudfront.net^",
+      "urlFilter": "||d191y0yd6d0jy4.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188460,7 +188460,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d192r5l88wrng7.cloudfront.net^",
+      "urlFilter": "||d192g7g8iuw79c.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188481,7 +188481,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d194f6c2fc.com^",
+      "urlFilter": "||d192r5l88wrng7.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188502,7 +188502,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d196fri2z18sm.cloudfront.net^",
+      "urlFilter": "||d194f6c2fc.com^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188523,7 +188523,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d199kwgcer5a6q.cloudfront.net^",
+      "urlFilter": "||d196fri2z18sm.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188544,7 +188544,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d19a04d0igndnt.cloudfront.net^",
+      "urlFilter": "||d199kwgcer5a6q.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188565,7 +188565,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d19bpqj0yivlb3.cloudfront.net^",
+      "urlFilter": "||d19a04d0igndnt.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188586,7 +188586,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d19diizb3qce6y.cloudfront.net^",
+      "urlFilter": "||d19bpqj0yivlb3.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188607,7 +188607,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d19gkl2iaav80x.cloudfront.net^",
+      "urlFilter": "||d19diizb3qce6y.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188628,7 +188628,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d19y03yc9s7c1c.cloudfront.net^",
+      "urlFilter": "||d19gkl2iaav80x.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188649,7 +188649,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1a3jb5hjny5s4.cloudfront.net^",
+      "urlFilter": "||d19y03yc9s7c1c.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188670,7 +188670,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1aa9f6zukqylf.cloudfront.net^",
+      "urlFilter": "||d1a3jb5hjny5s4.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188691,7 +188691,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1ac2du043ydir.cloudfront.net^",
+      "urlFilter": "||d1aa9f6zukqylf.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188712,7 +188712,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1aezk8tun0dhm.cloudfront.net^",
+      "urlFilter": "||d1ac2du043ydir.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188733,7 +188733,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1aiciyg0qwvvr.cloudfront.net^",
+      "urlFilter": "||d1aezk8tun0dhm.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188754,7 +188754,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1ap9gbbf77h85.cloudfront.net^",
+      "urlFilter": "||d1aiciyg0qwvvr.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188775,7 +188775,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1appgm50chwbg.cloudfront.net^",
+      "urlFilter": "||d1ap9gbbf77h85.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188796,7 +188796,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1aqvw7cn4ydzo.cloudfront.net^",
+      "urlFilter": "||d1appgm50chwbg.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188817,7 +188817,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1aukpqf83rqhe.cloudfront.net^",
+      "urlFilter": "||d1aqvw7cn4ydzo.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188838,7 +188838,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1ayv3a7nyno3a.cloudfront.net^",
+      "urlFilter": "||d1aukpqf83rqhe.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188859,7 +188859,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1az618or4kzj8.cloudfront.net^",
+      "urlFilter": "||d1ayv3a7nyno3a.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188880,7 +188880,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1aznprfp4xena.cloudfront.net^",
+      "urlFilter": "||d1az618or4kzj8.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188901,7 +188901,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1azpphj80lavy.cloudfront.net^",
+      "urlFilter": "||d1aznprfp4xena.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188922,7 +188922,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1b240xv9h0q8y.cloudfront.net^",
+      "urlFilter": "||d1azpphj80lavy.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188943,7 +188943,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1b499kr4qnas6.cloudfront.net^",
+      "urlFilter": "||d1b240xv9h0q8y.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188964,7 +188964,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1b7aq9bn3uykv.cloudfront.net^",
+      "urlFilter": "||d1b499kr4qnas6.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
@@ -188985,7 +188985,7 @@
       "type": "allow"
     },
     "condition": {
-      "urlFilter": "||d1b9b1cxai2c03.cloudfront.net^",
+      "urlFilter": "||d1b7aq9bn3uykv.cloudfront.net^",
       "resourceTypes": [
         "main_frame",
         "sub_frame",
