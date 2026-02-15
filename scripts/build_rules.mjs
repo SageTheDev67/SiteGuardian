@@ -4,10 +4,7 @@ import path from "node:path";
 const INPUT = "lists/trackers_domains.txt";
 const OUT_DIR = "rules";
 
-// keep under your max number of rulesets in manifest
 const MAX_RULESETS = 10;
-
-// chunk size controls how many output files you get
 const CHUNK_SIZE = 9000;
 
 function uniq(arr) { return [...new Set(arr)]; }
@@ -19,12 +16,12 @@ function readDomains(file) {
     .map(l => l.trim())
     .filter(Boolean)
     .filter(l => !l.startsWith("#"))
+    .map(d => d.toLowerCase())
     .map(d => d.replace(/^www\./, ""))
     .filter(d => /^[a-z0-9.-]+\.[a-z]{2,}$/i.test(d));
 }
 
 function toRule(id, domain) {
-  // allow (do not block) + use DNR feedback to count matches
   return {
     id,
     priority: 1,
@@ -32,7 +29,15 @@ function toRule(id, domain) {
     condition: {
       urlFilter: domain,
       resourceTypes: [
-        "main_frame","sub_frame","script","xmlhttprequest","image","media","font","stylesheet","other"
+        "main_frame",
+        "sub_frame",
+        "script",
+        "xmlhttprequest",
+        "image",
+        "media",
+        "font",
+        "stylesheet",
+        "other"
       ]
     }
   };
@@ -58,16 +63,22 @@ const parts = chunk(domains, CHUNK_SIZE).slice(0, MAX_RULESETS);
 
 let globalId = 1;
 
-// write populated files
-for (let i = 0; i < parts.length; i++) {
-  const rules = parts[i].map(d => toRule(globalId++, d));
-  fs.writeFileSync(path.join(OUT_DIR, `tracker_rules_${i + 1}.json`), JSON.stringify(rules, null, 2));
-  console.log(`wrote tracker_rules_${i + 1}.json (${rules.length})`);
+// Always write ALL 10 files every run
+for (let i = 1; i <= MAX_RULESETS; i++) {
+  const idx = i - 1;
+  const slice = parts[idx] || [];
+  const rules = slice.map(d => toRule(globalId++, d));
+
+  fs.writeFileSync(
+    path.join(OUT_DIR, `tracker_rules_${i}.json`),
+    JSON.stringify(rules, null, 2),
+    "utf8"
+  );
+
+  console.log(`wrote tracker_rules_${i}.json (${rules.length})`);
 }
 
-// ensure remaining files exist (empty)
-for (let i = parts.length + 1; i <= MAX_RULESETS; i++) {
-  const p = path.join(OUT_DIR, `tracker_rules_${i}.json`);
-  if (!fs.existsSync(p)) fs.writeFileSync(p, "[]");
-  console.log(`ensured tracker_rules_${i}.json`);
+// If you are not getting past ruleset 1, it means domains <= CHUNK_SIZE
+if (parts.length <= 1) {
+  console.log(`Only ${parts.length} ruleset(s) produced. Increase domains or lower CHUNK_SIZE.`);
 }
