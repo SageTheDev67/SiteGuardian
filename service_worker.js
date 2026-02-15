@@ -1,4 +1,4 @@
-const DB_KEY = "sg_db_v1";
+const DB_KEY = "sg_db_v2";
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -6,10 +6,18 @@ const DEFAULTS = {
   settings: {
     snapshotEveryMinutes: 30,
     defaultThresholdKB: 256,
-    historyDays: 30
+    historyDays: 30,
+
+    // New:
+    dailyReportEnabled: false,
+    dailyReportHourLocal: 9, // 0-23 local time
+    dailyReportTopN: 5
   },
   exclusions: {
     hostnames: []
+  },
+  meta: {
+    lastSnapshotAt: 0
   },
   sites: {}
 };
@@ -18,6 +26,12 @@ function now() { return Date.now(); }
 function clamp(n, a, b) { return Math.max(a, Math.min(b, n)); }
 function originHost(origin) { try { return new URL(origin).hostname; } catch { return ""; } }
 function safeOrigin(u) { try { return new URL(u).origin; } catch { return null; } }
+
+function startOfLocalDayMs(ts = Date.now()) {
+  const d = new Date(ts);
+  d.setHours(0, 0, 0, 0);
+  return d.getTime();
+}
 
 async function loadDB() {
   const res = await chrome.storage.local.get(DB_KEY);
@@ -43,7 +57,11 @@ function getSite(db, origin) {
   return (db.sites[origin] = {
     origin,
     hostname: originHost(origin),
+
     lastSeen: 0,
+
+    // New: for "visited today"
+    lastSeenToday: 0,
 
     cookiesCount: 0,
     cookiesBytesEstimate: 0,
@@ -91,18 +109,18 @@ function pruneHistory(site, keepDays) {
   site.history = (site.history || []).filter(p => p.ts >= cutoff);
 }
 
-// Stronger trust: trackers matter most, persistent storage matters more than session, churn matters, SW small penalty.
+// Strong trust score (maxed weighting)
 function computeTrust(site) {
   const trackerPenalty = Math.min(55, (site.trackerHits7d || 0) * 2.5);
   const thirdPartyCookiePenalty = Math.min(25, (site.thirdPartyCookies || 0) * 5);
 
   const persistentKB = Math.floor((site.persistentBytes || 0) / 1024);
-  const storagePenalty = Math.min(22, Math.floor(persistentKB / 64)); // slightly harsher
+  const storagePenalty = Math.min(22, Math.floor(persistentKB / 64));
 
   const churnPenalty = Math.min(12, Math.floor((site.storageEvents7d || 0) / 50));
   const swPenalty = site.serviceWorkerPresent ? 5 : 0;
 
-  // New: persistent vs session ratio penalty (persistent is worse)
+  // Persistent > Session = more suspicious (small penalty)
   const sessionRatioPenalty = (site.persistentBytes || 0) > (site.sessionBytes || 0) ? 5 : 0;
 
   let score = 100 - trackerPenalty - thirdPartyCookiePenalty - storagePenalty - churnPenalty - swPenalty - sessionRatioPenalty;
@@ -129,12 +147,11 @@ async function refreshCookies(origin) {
 }
 
 /**
- * Robust tracker attribution:
- * DNR feedback gives matched rules with request details including tabId.
- * We map tabId -> top-frame origin by tracking tab updates/activations.
- * Then we can attribute tracker hits to the correct site.
+ * Tracker attribution:
+ * DNR matched rules provide tabId (best) and often initiator (fallback).
  */
 const tabTopOrigin = new Map(); // tabId -> origin
+
 async function updateTabTopOrigin(tabId) {
   try {
     const tab = await chrome.tabs.get(tabId);
@@ -152,6 +169,9 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
 chrome.tabs.onActivated.addListener(({ tabId }) => {
   updateTabTopOrigin(tabId);
 });
+chrome.tabs.onRemoved.addListener((tabId) => {
+  tabTopOrigin.delete(tabId);
+});
 
 async function getMatchedRulesSince(sinceMs) {
   try {
@@ -162,16 +182,26 @@ async function getMatchedRulesSince(sinceMs) {
   }
 }
 
-function rollupMatchesByTopOrigin(matches) {
+function rollupMatches(matches) {
   const byOrigin = new Map();
 
   for (const m of matches) {
-    const tabId = m?.request?.tabId;
-    if (typeof tabId !== "number" || tabId < 0) continue;
+    const req = m?.request || {};
+    const tabId = req.tabId;
 
-    const origin = tabTopOrigin.get(tabId);
+    let origin = null;
+
+    // best: tabId -> top origin
+    if (typeof tabId === "number" && tabId >= 0) {
+      origin = tabTopOrigin.get(tabId) || null;
+    }
+
+    // fallback: initiator origin
+    if (!origin && req.initiator) {
+      origin = safeOrigin(req.initiator);
+    }
+
     if (!origin) continue;
-
     byOrigin.set(origin, (byOrigin.get(origin) || 0) + 1);
   }
 
@@ -189,11 +219,12 @@ async function maybeAlert(db, site) {
 
   const threshold = site.thresholdKB ?? db.settings.defaultThresholdKB;
 
+  // anti-spam: 60 minutes cooldown
   if (site.lastAlertedAt && (now() - site.lastAlertedAt) < 60 * 60 * 1000) return;
 
   if (delta >= threshold) {
     site.lastAlertedAt = now();
-    await chrome.notifications.create(`sg_${site.hostname}_${site.lastAlertedAt}`, {
+    await chrome.notifications.create(`sg_growth_${site.hostname}_${site.lastAlertedAt}`, {
       type: "basic",
       iconUrl: "icons/icon128.png",
       title: "SiteGuardian alert",
@@ -202,23 +233,75 @@ async function maybeAlert(db, site) {
   }
 }
 
-async function runSnapshot() {
-  // Pull recent matched rules; DNR returns bounded data so keep it to last 24h
-  const matches = await getMatchedRulesSince(now() - DAY_MS);
-  const byOrigin = rollupMatchesByTopOrigin(matches);
+function computeWorstToday(db) {
+  const start = startOfLocalDayMs();
+  const sites = Object.values(db.sites || {})
+    .filter(s => s?.hostname)
+    .filter(s => !excluded(db, s.hostname))
+    .filter(s => (s.lastSeenToday || 0) >= start);
 
+  if (!sites.length) return null;
+
+  sites.sort((a, b) => {
+    const ta = a.history?.at(-1)?.trust ?? 100;
+    const tb = b.history?.at(-1)?.trust ?? 100;
+    if (ta !== tb) return ta - tb;
+    return (b.lastSeenToday || 0) - (a.lastSeenToday || 0);
+  });
+
+  const worst = sites[0];
+  return {
+    hostname: worst.hostname,
+    trust: worst.history?.at(-1)?.trust ?? 100,
+    trackers7d: worst.trackerHits7d || 0,
+    storageKB: sumStorageKB(worst)
+  };
+}
+
+function computeLeaderboard(db, topN = 10) {
+  const sites = Object.values(db.sites || {})
+    .filter(s => s?.hostname)
+    .filter(s => !excluded(db, s.hostname));
+
+  sites.sort((a, b) => {
+    const ta = a.history?.at(-1)?.trust ?? 100;
+    const tb = b.history?.at(-1)?.trust ?? 100;
+    if (ta !== tb) return ta - tb; // worst first
+    return (b.lastSeen || 0) - (a.lastSeen || 0);
+  });
+
+  return sites.slice(0, topN).map(s => ({
+    hostname: s.hostname,
+    trust: s.history?.at(-1)?.trust ?? 100,
+    trackers7d: s.trackerHits7d || 0,
+    storageKB: sumStorageKB(s),
+    lastSeen: s.lastSeen || 0
+  }));
+}
+
+async function runSnapshot({ sinceMs, reason } = {}) {
   await withDB(async (db) => {
-    // Update tracker buckets
+    const last = db.meta?.lastSnapshotAt || 0;
+
+    // Default: snapshot since lastSnapshotAt; cap to 24h back for safety
+    const fallbackSince = Math.max(now() - DAY_MS, last || (now() - DAY_MS));
+    const since = typeof sinceMs === "number" ? sinceMs : fallbackSince;
+
+    const matches = await getMatchedRulesSince(since);
+    const byOrigin = rollupMatches(matches);
+
+    // Apply tracker deltas
     for (const [origin, count] of byOrigin.entries()) {
       const hostname = originHost(origin);
       if (!hostname || excluded(db, hostname)) continue;
 
       const site = getSite(db, origin);
       site.lastSeen = now();
+      site.lastSeenToday = now();
       bucketAdd(site, "trackerHits7d", count);
     }
 
-    // Add history point for all non-excluded sites
+    // Append a history point for each tracked site
     for (const origin of Object.keys(db.sites)) {
       const site = db.sites[origin];
       if (!site?.hostname) continue;
@@ -237,20 +320,82 @@ async function runSnapshot() {
       await maybeAlert(db, site);
     }
 
+    db.meta.lastSnapshotAt = now();
+
+    // (debug-friendly) store last snapshot reason (safe)
+    db.meta.lastSnapshotReason = reason || "scheduled";
+
     return db;
   });
+}
+
+function scheduleDailyReportAlarm(db) {
+  const hour = clamp(db.settings.dailyReportHourLocal ?? 9, 0, 23);
+
+  const d = new Date();
+  d.setHours(hour, 0, 0, 0);
+
+  // if already passed today, schedule for tomorrow
+  if (d.getTime() <= Date.now()) d.setDate(d.getDate() + 1);
+
+  chrome.alarms.create("sg_daily_report", { when: d.getTime() });
+}
+
+async function sendDailyReportIfEnabled() {
+  const db = await loadDB();
+  if (!db.settings.dailyReportEnabled) {
+    scheduleDailyReportAlarm(db);
+    return;
+  }
+
+  const worst = computeWorstToday(db);
+  const top = computeLeaderboard(db, db.settings.dailyReportTopN || 5);
+
+  let message = "";
+  if (!worst) {
+    message = "No sites visited today yet.";
+  } else {
+    message =
+      `Worst today: ${worst.hostname} (${worst.trust}/100). ` +
+      `Trackers: ${worst.trackers7d} | Storage: ${worst.storageKB} KB`;
+  }
+
+  if (top.length) {
+    const list = top
+      .slice(0, 3)
+      .map((x, i) => `${i + 1}) ${x.hostname} (${x.trust}/100)`)
+      .join("  ");
+    message += `  Top risks: ${list}`;
+  }
+
+  await chrome.notifications.create(`sg_daily_${Date.now()}`, {
+    type: "basic",
+    iconUrl: "icons/icon128.png",
+    title: "SiteGuardian daily report",
+    message
+  });
+
+  scheduleDailyReportAlarm(db);
 }
 
 // Install scheduling
 chrome.runtime.onInstalled.addListener(async () => {
   const db = await loadDB();
+  if (!db.meta) db.meta = structuredClone(DEFAULTS.meta);
   await saveDB(db);
+
   chrome.alarms.create("sg_snapshot", { periodInMinutes: db.settings.snapshotEveryMinutes });
+  scheduleDailyReportAlarm(db);
 });
 
-// Run snapshot on schedule
+// Alarms
 chrome.alarms.onAlarm.addListener(async (alarm) => {
-  if (alarm?.name === "sg_snapshot") await runSnapshot();
+  if (alarm?.name === "sg_snapshot") {
+    await runSnapshot({ reason: "scheduled" });
+  }
+  if (alarm?.name === "sg_daily_report") {
+    await sendDailyReportIfEnabled();
+  }
 });
 
 // Message API
@@ -259,7 +404,42 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     try {
       if (msg?.type === "SG_GET_STATE") {
         const db = await loadDB();
-        return sendResponse({ ok: true, db });
+        const worstToday = computeWorstToday(db);
+        const leaderboard = computeLeaderboard(db, 10);
+        return sendResponse({ ok: true, db, worstToday, leaderboard });
+      }
+
+      // Instant tracker update when popup opens
+      if (msg?.type === "SG_SNAPSHOT_NOW") {
+        const db = await loadDB();
+        const since = db.meta?.lastSnapshotAt || Math.max(Date.now() - DAY_MS, 0);
+        await runSnapshot({ sinceMs: since, reason: "popup_open" });
+        const db2 = await loadDB();
+        const worstToday = computeWorstToday(db2);
+        const leaderboard = computeLeaderboard(db2, 10);
+        return sendResponse({ ok: true, db: db2, worstToday, leaderboard });
+      }
+
+      if (msg?.type === "SG_SET_DAILY_REPORT") {
+        const { enabled } = msg.payload || {};
+        await withDB(async (db) => {
+          db.settings.dailyReportEnabled = !!enabled;
+          return db;
+        });
+        const db = await loadDB();
+        scheduleDailyReportAlarm(db);
+        return sendResponse({ ok: true });
+      }
+
+      if (msg?.type === "SG_SET_DAILY_REPORT_HOUR") {
+        const { hour } = msg.payload || {};
+        await withDB(async (db) => {
+          db.settings.dailyReportHourLocal = clamp(Math.floor(Number(hour)), 0, 23);
+          return db;
+        });
+        const db = await loadDB();
+        scheduleDailyReportAlarm(db);
+        return sendResponse({ ok: true });
       }
 
       if (msg?.type === "SG_SET_EXCLUDED") {
@@ -341,6 +521,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 
           const site = getSite(db, origin);
           site.lastSeen = now();
+          site.lastSeenToday = now();
           site.persistentBytes = p.persistentBytes ?? site.persistentBytes;
           site.sessionBytes = p.sessionBytes ?? site.sessionBytes;
           site.serviceWorkerPresent = !!p.serviceWorkerPresent;
