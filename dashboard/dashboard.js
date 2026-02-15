@@ -24,6 +24,12 @@ function fmtKB(kb){
   return `${(kb/1024).toFixed(1)} MB`;
 }
 
+function trustColor(trust){
+  if (trust >= 80) return "#16a34a";   // green
+  if (trust >= 50) return "#ca8a04";   // amber
+  return "#dc2626";                   // red
+}
+
 async function getState(){
   const res = await chrome.runtime.sendMessage({ type: "SG_GET_STATE" });
   if (!res?.ok) throw new Error(res?.error || "Failed to load");
@@ -63,6 +69,7 @@ function buildChart(site){
 function rowHTML(site, isExcluded){
   const storageKB = Math.floor(((site.persistentBytes||0)+(site.sessionBytes||0))/1024);
   const trust = site.history?.at(-1)?.trust ?? 100;
+  const color = trustColor(trust);
 
   const actions = isExcluded
     ? `<button class="btn" data-act="unexclude" data-host="${site.hostname}">Unexclude</button>`
@@ -79,7 +86,7 @@ function rowHTML(site, isExcluded){
       <td><span class="badge">${site.trackerHits7d||0}</span></td>
       <td>${fmtKB(storageKB)}</td>
       <td>${site.thirdPartyCookies||0}</td>
-      <td><span class="badge">${trust}/100</span></td>
+      <td><span class="badge" style="color:${color}">${trust}/100</span></td>
       <td class="actions">${actions}</td>
     </tr>
   `;
@@ -105,7 +112,13 @@ function render(){
   if (activeTab === "tracked") visible = visible.filter(s => !excludedSet.has(s.hostname));
   if (activeTab === "excluded") visible = visible.filter(s => excludedSet.has(s.hostname));
 
-  visible.sort((a,b)=>(b.lastSeen||0)-(a.lastSeen||0));
+  // Worst trust first (most risky at top)
+  visible.sort((a,b) => {
+    const ta = a.history?.at(-1)?.trust ?? 100;
+    const tb = b.history?.at(-1)?.trust ?? 100;
+    if (ta !== tb) return ta - tb;
+    return (b.lastSeen||0) - (a.lastSeen||0);
+  });
 
   rowsEl.innerHTML = "";
   for (const s of visible) rowsEl.insertAdjacentHTML("beforeend", rowHTML(s, excludedSet.has(s.hostname)));
