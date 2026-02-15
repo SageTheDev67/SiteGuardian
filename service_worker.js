@@ -1,5 +1,7 @@
 const DB_KEY = "sg_db_v1";
 
+const DAY_MS = 24 * 60 * 60 * 1000;
+
 const DEFAULTS = {
   settings: {
     snapshotEveryMinutes: 30,
@@ -11,8 +13,6 @@ const DEFAULTS = {
   },
   sites: {}
 };
-
-const DAY_MS = 24 * 60 * 60 * 1000;
 
 function now() { return Date.now(); }
 function clamp(n, a, b) { return Math.max(a, Math.min(b, n)); }
@@ -32,7 +32,6 @@ async function withDB(fn) {
   await saveDB(db);
   return out;
 }
-
 function excluded(db, hostname) {
   return db.exclusions.hostnames.includes(hostname);
 }
@@ -92,17 +91,21 @@ function pruneHistory(site, keepDays) {
   site.history = (site.history || []).filter(p => p.ts >= cutoff);
 }
 
+// Stronger trust: trackers matter most, persistent storage matters more than session, churn matters, SW small penalty.
 function computeTrust(site) {
-  const trackerPenalty = Math.min(45, (site.trackerHits7d || 0) * 2);
+  const trackerPenalty = Math.min(55, (site.trackerHits7d || 0) * 2.5);
   const thirdPartyCookiePenalty = Math.min(25, (site.thirdPartyCookies || 0) * 5);
 
   const persistentKB = Math.floor((site.persistentBytes || 0) / 1024);
-  const storagePenalty = Math.min(20, Math.floor(persistentKB / 64));
+  const storagePenalty = Math.min(22, Math.floor(persistentKB / 64)); // slightly harsher
 
-  const churnPenalty = Math.min(10, Math.floor((site.storageEvents7d || 0) / 50));
+  const churnPenalty = Math.min(12, Math.floor((site.storageEvents7d || 0) / 50));
   const swPenalty = site.serviceWorkerPresent ? 5 : 0;
 
-  let score = 100 - trackerPenalty - thirdPartyCookiePenalty - storagePenalty - churnPenalty - swPenalty;
+  // New: persistent vs session ratio penalty (persistent is worse)
+  const sessionRatioPenalty = (site.persistentBytes || 0) > (site.sessionBytes || 0) ? 5 : 0;
+
+  let score = 100 - trackerPenalty - thirdPartyCookiePenalty - storagePenalty - churnPenalty - swPenalty - sessionRatioPenalty;
   score = clamp(score, 0, 100);
   if (score < 40) score = Math.floor(score * 0.85);
   return score;
@@ -119,12 +122,36 @@ async function refreshCookies(origin) {
   for (const c of cookies) {
     const cd = (c.domain || "").replace(/^\./, "").replace(/^www\./, "");
     if (cd && cd !== host && !host.endsWith("." + cd) && !cd.endsWith("." + host)) thirdParty++;
-
     bytes += (c.name?.length || 0) + (c.value?.length || 0) + (c.domain?.length || 0) + (c.path?.length || 0) + 32;
   }
 
   return { cookiesCount: cookies.length, cookiesBytesEstimate: bytes, thirdPartyCookies: thirdParty };
 }
+
+/**
+ * Robust tracker attribution:
+ * DNR feedback gives matched rules with request details including tabId.
+ * We map tabId -> top-frame origin by tracking tab updates/activations.
+ * Then we can attribute tracker hits to the correct site.
+ */
+const tabTopOrigin = new Map(); // tabId -> origin
+async function updateTabTopOrigin(tabId) {
+  try {
+    const tab = await chrome.tabs.get(tabId);
+    const o = tab?.url ? safeOrigin(tab.url) : null;
+    if (o) tabTopOrigin.set(tabId, o);
+  } catch {}
+}
+
+chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
+  if (changeInfo?.url) {
+    const o = safeOrigin(changeInfo.url);
+    if (o) tabTopOrigin.set(tabId, o);
+  }
+});
+chrome.tabs.onActivated.addListener(({ tabId }) => {
+  updateTabTopOrigin(tabId);
+});
 
 async function getMatchedRulesSince(sinceMs) {
   try {
@@ -135,14 +162,19 @@ async function getMatchedRulesSince(sinceMs) {
   }
 }
 
-function rollupMatches(matches) {
+function rollupMatchesByTopOrigin(matches) {
   const byOrigin = new Map();
+
   for (const m of matches) {
-    const initiator = m?.request?.initiator;
-    const origin = initiator ? safeOrigin(initiator) : null;
+    const tabId = m?.request?.tabId;
+    if (typeof tabId !== "number" || tabId < 0) continue;
+
+    const origin = tabTopOrigin.get(tabId);
     if (!origin) continue;
+
     byOrigin.set(origin, (byOrigin.get(origin) || 0) + 1);
   }
+
   return byOrigin;
 }
 
@@ -171,11 +203,12 @@ async function maybeAlert(db, site) {
 }
 
 async function runSnapshot() {
+  // Pull recent matched rules; DNR returns bounded data so keep it to last 24h
   const matches = await getMatchedRulesSince(now() - DAY_MS);
-  const byOrigin = rollupMatches(matches);
+  const byOrigin = rollupMatchesByTopOrigin(matches);
 
   await withDB(async (db) => {
-    // Update tracker hits
+    // Update tracker buckets
     for (const [origin, count] of byOrigin.entries()) {
       const hostname = originHost(origin);
       if (!hostname || excluded(db, hostname)) continue;
@@ -185,7 +218,7 @@ async function runSnapshot() {
       bucketAdd(site, "trackerHits7d", count);
     }
 
-    // Append history for all tracked sites
+    // Add history point for all non-excluded sites
     for (const origin of Object.keys(db.sites)) {
       const site = db.sites[origin];
       if (!site?.hostname) continue;
@@ -208,16 +241,19 @@ async function runSnapshot() {
   });
 }
 
+// Install scheduling
 chrome.runtime.onInstalled.addListener(async () => {
   const db = await loadDB();
   await saveDB(db);
   chrome.alarms.create("sg_snapshot", { periodInMinutes: db.settings.snapshotEveryMinutes });
 });
 
+// Run snapshot on schedule
 chrome.alarms.onAlarm.addListener(async (alarm) => {
   if (alarm?.name === "sg_snapshot") await runSnapshot();
 });
 
+// Message API
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   (async () => {
     try {
