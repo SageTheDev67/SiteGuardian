@@ -24,23 +24,25 @@ function fmtKB(kb){
   return `${(kb/1024).toFixed(1)} MB`;
 }
 
-function calcTotals(db){
-  const sites = Object.values(db.sites || {});
-  const tracked = sites.filter(s => s?.hostname && !db.exclusions.hostnames.includes(s.hostname));
-  const totalTrackers = tracked.reduce((a,s)=>a+(s.trackerHits7d||0),0);
-  const totalStorageKB = tracked.reduce((a,s)=>a+Math.floor(((s.persistentBytes||0)+(s.sessionBytes||0))/1024),0);
-  const total3p = tracked.reduce((a,s)=>a+(s.thirdPartyCookies||0),0);
-  const avgTrust = tracked.length ? Math.round(tracked.reduce((a,s)=>a+((s.history?.at(-1)?.trust) ?? 100),0)/tracked.length) : 100;
-  return { tracked, totalTrackers, totalStorageKB, total3p, avgTrust };
-}
-
 async function getState(){
   const res = await chrome.runtime.sendMessage({ type: "SG_GET_STATE" });
   if (!res?.ok) throw new Error(res?.error || "Failed to load");
   return res.db;
 }
 
-function pickDefaultSite(tracked){
+function totals(db){
+  const sites = Object.values(db.sites || {});
+  const tracked = sites.filter(s => s?.hostname && !db.exclusions.hostnames.includes(s.hostname));
+  const totalTrackers = tracked.reduce((a,s)=>a+(s.trackerHits7d||0),0);
+  const totalStorageKB = tracked.reduce((a,s)=>a+Math.floor(((s.persistentBytes||0)+(s.sessionBytes||0))/1024),0);
+  const total3p = tracked.reduce((a,s)=>a+(s.thirdPartyCookies||0),0);
+  const avgTrust = tracked.length
+    ? Math.round(tracked.reduce((a,s)=>a+((s.history?.at(-1)?.trust) ?? 100),0)/tracked.length)
+    : 100;
+  return { tracked, totalTrackers, totalStorageKB, total3p, avgTrust };
+}
+
+function ensureSelection(tracked){
   if (selectedOrigin && state?.sites?.[selectedOrigin]) return;
   selectedOrigin = tracked[0]?.origin || null;
 }
@@ -58,11 +60,11 @@ function buildChart(site){
   drawLineChart(chartCanvas, points);
 }
 
-function rowHTML(site, excluded){
+function rowHTML(site, isExcluded){
   const storageKB = Math.floor(((site.persistentBytes||0)+(site.sessionBytes||0))/1024);
   const trust = site.history?.at(-1)?.trust ?? 100;
 
-  const actions = excluded
+  const actions = isExcluded
     ? `<button class="btn" data-act="unexclude" data-host="${site.hostname}">Unexclude</button>`
     : `
       <button class="btn" data-act="select" data-origin="${site.origin}">View</button>
@@ -86,31 +88,30 @@ function rowHTML(site, excluded){
 function render(){
   const db = state;
   const q = (searchEl.value || "").toLowerCase();
-  const totals = calcTotals(db);
+  const t = totals(db);
 
-  mTrackers.textContent = totals.totalTrackers;
-  mStorage.textContent = fmtKB(totals.totalStorageKB);
-  m3p.textContent = totals.total3p;
-  mSites.textContent = totals.tracked.length;
-  avgTrustPill.textContent = `Avg Trust ${totals.avgTrust}%`;
+  mTrackers.textContent = t.totalTrackers;
+  mStorage.textContent = fmtKB(t.totalStorageKB);
+  m3p.textContent = t.total3p;
+  mSites.textContent = t.tracked.length;
+  avgTrustPill.textContent = `Avg Trust ${t.avgTrust}%`;
 
-  pickDefaultSite(totals.tracked);
+  ensureSelection(t.tracked);
 
   const sites = Object.values(db.sites || {}).filter(s => s?.hostname);
-  const excludedHosts = new Set(db.exclusions.hostnames);
+  const excludedSet = new Set(db.exclusions.hostnames);
 
   let visible = sites.filter(s => s.hostname.toLowerCase().includes(q));
-  if (activeTab === "tracked") visible = visible.filter(s => !excludedHosts.has(s.hostname));
-  if (activeTab === "excluded") visible = visible.filter(s => excludedHosts.has(s.hostname));
+  if (activeTab === "tracked") visible = visible.filter(s => !excludedSet.has(s.hostname));
+  if (activeTab === "excluded") visible = visible.filter(s => excludedSet.has(s.hostname));
 
   visible.sort((a,b)=>(b.lastSeen||0)-(a.lastSeen||0));
 
   rowsEl.innerHTML = "";
-  for (const s of visible) rowsEl.insertAdjacentHTML("beforeend", rowHTML(s, excludedHosts.has(s.hostname)));
+  for (const s of visible) rowsEl.insertAdjacentHTML("beforeend", rowHTML(s, excludedSet.has(s.hostname)));
 
   emptyEl.style.display = visible.length ? "none" : "block";
 
-  // chart: selected origin
   const selected = selectedOrigin ? db.sites[selectedOrigin] : null;
   buildChart(selected);
 }
@@ -163,7 +164,6 @@ rowsEl.addEventListener("click", async (e) => {
 
     await chrome.runtime.sendMessage({ type: "SG_SET_THRESHOLD", payload: { origin, thresholdKB: next } });
     await refresh();
-    return;
   }
 });
 
