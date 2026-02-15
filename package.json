@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "fetch:trackers": "node scripts/fetch_trackers.mjs",
     "build:rules": "node scripts/build_rules.mjs"
   }
 }
