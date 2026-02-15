@@ -32,6 +32,7 @@ jobs:
         run: |
           git config user.name "siteguardian-bot"
           git config user.email "siteguardian-bot@users.noreply.github.com"
-          git add lists/trackers_domains.txt rules/*.json
+          git add lists/trackers_domains.txt rules/tracker_rules_*.json
+          git status
           git diff --cached --quiet || git commit -m "Update tracker domains + rules"
           git push
