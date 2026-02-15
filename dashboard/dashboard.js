@@ -14,7 +14,16 @@ const chartCanvas = document.getElementById("chart");
 const rangeBtns = [...document.querySelectorAll(".segBtn")];
 const tabBtns = [...document.querySelectorAll(".tab")];
 
+// New
+const worstTodayMain = document.getElementById("worstTodayMain");
+const worstTodayMeta = document.getElementById("worstTodayMeta");
+const leaderList = document.getElementById("leaderList");
+const dailyToggle = document.getElementById("dailyToggle");
+const dailyHour = document.getElementById("dailyHour");
+
 let state = null;
+let worstToday = null;
+let leaderboard = [];
 let selectedOrigin = null;
 let rangeDays = 7;
 let activeTab = "tracked";
@@ -25,15 +34,16 @@ function fmtKB(kb){
 }
 
 function trustColor(trust){
-  if (trust >= 80) return "#16a34a";   // green
-  if (trust >= 50) return "#ca8a04";   // amber
-  return "#dc2626";                   // red
+  if (trust >= 80) return "#16a34a";
+  if (trust >= 50) return "#ca8a04";
+  return "#dc2626";
 }
 
-async function getState(){
-  const res = await chrome.runtime.sendMessage({ type: "SG_GET_STATE" });
+// Instant update: snapshot now on popup open
+async function getStateInstant(){
+  const res = await chrome.runtime.sendMessage({ type: "SG_SNAPSHOT_NOW" });
   if (!res?.ok) throw new Error(res?.error || "Failed to load");
-  return res.db;
+  return res;
 }
 
 function totals(db){
@@ -92,6 +102,40 @@ function rowHTML(site, isExcluded){
   `;
 }
 
+function renderTodayAndLeaderboard(){
+  // Daily settings UI
+  dailyToggle.checked = !!state?.settings?.dailyReportEnabled;
+  const hour = state?.settings?.dailyReportHourLocal ?? 9;
+  dailyHour.value = String(hour);
+
+  // Worst today
+  if (!worstToday) {
+    worstTodayMain.textContent = "—";
+    worstTodayMeta.textContent = "No sites visited today yet.";
+  } else {
+    const c = trustColor(worstToday.trust);
+    worstTodayMain.innerHTML = `<span style="color:${c}">${worstToday.hostname}</span> (${worstToday.trust}/100)`;
+    worstTodayMeta.textContent = `Trackers (7d): ${worstToday.trackers7d}  •  Storage: ${worstToday.storageKB} KB`;
+  }
+
+  // Leaderboard list
+  leaderList.innerHTML = "";
+  const list = (leaderboard || []).slice(0, 10);
+  for (const item of list) {
+    const c = trustColor(item.trust);
+    const html = `
+      <div class="leaderItem">
+        <div class="leaderLeft">
+          <div class="leaderHost" style="color:${c}">${item.hostname}</div>
+          <div class="leaderMeta">Trackers: ${item.trackers7d} • Storage: ${item.storageKB} KB</div>
+        </div>
+        <div class="badge" style="color:${c}">${item.trust}/100</div>
+      </div>
+    `;
+    leaderList.insertAdjacentHTML("beforeend", html);
+  }
+}
+
 function render(){
   const db = state;
   const q = (searchEl.value || "").toLowerCase();
@@ -112,7 +156,7 @@ function render(){
   if (activeTab === "tracked") visible = visible.filter(s => !excludedSet.has(s.hostname));
   if (activeTab === "excluded") visible = visible.filter(s => excludedSet.has(s.hostname));
 
-  // Worst trust first (most risky at top)
+  // Worst trust first
   visible.sort((a,b) => {
     const ta = a.history?.at(-1)?.trust ?? 100;
     const tb = b.history?.at(-1)?.trust ?? 100;
@@ -125,12 +169,19 @@ function render(){
 
   emptyEl.style.display = visible.length ? "none" : "block";
 
+  // chart = selected origin
   const selected = selectedOrigin ? db.sites[selectedOrigin] : null;
   buildChart(selected);
+
+  // today + leaderboard
+  renderTodayAndLeaderboard();
 }
 
-async function refresh(){
-  state = await getState();
+async function refreshInstant(){
+  const res = await getStateInstant();
+  state = res.db;
+  worstToday = res.worstToday || null;
+  leaderboard = res.leaderboard || [];
   render();
 }
 
@@ -149,21 +200,21 @@ rowsEl.addEventListener("click", async (e) => {
   if (act === "clear") {
     btn.disabled = true;
     await chrome.runtime.sendMessage({ type: "SG_CLEAR_SITE", payload: { origin: btn.dataset.origin } });
-    await refresh();
+    await refreshInstant();
     return;
   }
 
   if (act === "exclude") {
     btn.disabled = true;
     await chrome.runtime.sendMessage({ type: "SG_SET_EXCLUDED", payload: { hostname: btn.dataset.host, excluded: true } });
-    await refresh();
+    await refreshInstant();
     return;
   }
 
   if (act === "unexclude") {
     btn.disabled = true;
     await chrome.runtime.sendMessage({ type: "SG_SET_EXCLUDED", payload: { hostname: btn.dataset.host, excluded: false } });
-    await refresh();
+    await refreshInstant();
     return;
   }
 
@@ -176,7 +227,7 @@ rowsEl.addEventListener("click", async (e) => {
     if (!Number.isFinite(next)) return;
 
     await chrome.runtime.sendMessage({ type: "SG_SET_THRESHOLD", payload: { origin, thresholdKB: next } });
-    await refresh();
+    await refreshInstant();
   }
 });
 
@@ -196,4 +247,21 @@ tabBtns.forEach(b => b.addEventListener("click", () => {
   render();
 }));
 
-refresh();
+dailyToggle.addEventListener("change", async () => {
+  await chrome.runtime.sendMessage({
+    type: "SG_SET_DAILY_REPORT",
+    payload: { enabled: dailyToggle.checked }
+  });
+  await refreshInstant();
+});
+
+dailyHour.addEventListener("change", async () => {
+  await chrome.runtime.sendMessage({
+    type: "SG_SET_DAILY_REPORT_HOUR",
+    payload: { hour: Number(dailyHour.value) }
+  });
+  await refreshInstant();
+});
+
+// Run instant snapshot & render
+refreshInstant();
