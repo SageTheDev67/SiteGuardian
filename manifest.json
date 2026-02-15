@@ -6,12 +6,7 @@
   "manifest_version": 3,
 
   "action": {
-    "default_popup": "dashboard/dashboard.html",
-    "default_icon": {
-      "16": "icons/icon16.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
-    }
+    "default_popup": "dashboard/dashboard.html"
   },
 
   "background": {
@@ -52,11 +47,5 @@
       "js": ["content_script.js"],
       "run_at": "document_start"
     }
-  ],
-
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  }
+  ]
 }
