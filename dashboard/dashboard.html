@@ -7,34 +7,82 @@
   <link rel="stylesheet" href="dashboard.css" />
 </head>
 <body>
-  <header>
-    <div class="title">SiteGuardian</div>
-    <div class="subtitle">Hidden data monitor</div>
-  </header>
-
-  <section class="controls">
-    <input id="search" type="text" placeholder="Search sites..." />
-    <button id="refresh">Refresh</button>
-  </section>
-
-  <main>
-    <div id="list" class="list"></div>
-  </main>
-
-  <template id="rowTemplate">
-    <div class="row">
-      <div class="left">
-        <div class="host"></div>
-        <div class="meta"></div>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brandMark">🛡</div>
+        <div>
+          <div class="brandName">SiteGuardian</div>
+          <div class="brandSub">Know what’s stored. Take control.</div>
+        </div>
       </div>
-      <div class="right">
-        <div class="score"></div>
-        <button class="clear">Clear</button>
-      </div>
-    </div>
-  </template>
+      <div class="pill" id="avgTrustPill">Avg Trust 100%</div>
+    </header>
 
+    <section class="metricGrid">
+      <div class="metricCard">
+        <div class="metricLabel">Total Trackers</div>
+        <div class="metricValue" id="mTrackers">0</div>
+        <div class="metricHint">Matches in last 7 days</div>
+      </div>
+      <div class="metricCard">
+        <div class="metricLabel">Stored Data</div>
+        <div class="metricValue" id="mStorage">0 KB</div>
+        <div class="metricHint">Across tracked sites</div>
+      </div>
+      <div class="metricCard">
+        <div class="metricLabel">Third-Party Cookies</div>
+        <div class="metricValue" id="m3p">0</div>
+        <div class="metricHint">Estimated</div>
+      </div>
+      <div class="metricCard">
+        <div class="metricLabel">Sites Tracked</div>
+        <div class="metricValue" id="mSites">0</div>
+        <div class="metricHint">Seen recently</div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panelHead">
+        <div>
+          <div class="panelTitle">Activity</div>
+          <div class="panelSub">Storage trend (selected site)</div>
+        </div>
+        <div class="segmented">
+          <button class="segBtn active" data-range="7">7d</button>
+          <button class="segBtn" data-range="30">30d</button>
+        </div>
+      </div>
+      <canvas id="chart" height="140"></canvas>
+    </section>
+
+    <section class="toolbar">
+      <input id="search" placeholder="Filter websites..." />
+      <div class="tabs">
+        <button class="tab active" data-tab="tracked">Tracked</button>
+        <button class="tab" data-tab="excluded">Excluded</button>
+      </div>
+    </section>
+
+    <section class="tableWrap">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Website</th>
+            <th>Trackers</th>
+            <th>Storage</th>
+            <th>3P Cookies</th>
+            <th>Trust</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <div class="empty" id="emptyState">No results.</div>
+    </section>
+  </div>
+
+  <script src="chart.js"></script>
   <script src="dashboard.js"></script>
 </body>
 </html>
-
