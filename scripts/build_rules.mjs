@@ -22,12 +22,14 @@ function readDomains(file) {
 }
 
 function toRule(id, domain) {
+  // IMPORTANT: urlFilter uses Adblock-style anchors for accuracy
+  // Example: ||doubleclick.net^
   return {
     id,
     priority: 1,
     action: { type: "allow" },
     condition: {
-      urlFilter: domain,
+      urlFilter: `||${domain}^`,
       resourceTypes: [
         "main_frame",
         "sub_frame",
@@ -78,7 +80,6 @@ for (let i = 1; i <= MAX_RULESETS; i++) {
   console.log(`wrote tracker_rules_${i}.json (${rules.length})`);
 }
 
-// If you are not getting past ruleset 1, it means domains <= CHUNK_SIZE
 if (parts.length <= 1) {
   console.log(`Only ${parts.length} ruleset(s) produced. Increase domains or lower CHUNK_SIZE.`);
 }
