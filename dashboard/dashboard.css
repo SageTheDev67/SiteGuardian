@@ -12,7 +12,7 @@
 *{ box-sizing:border-box; }
 body{
   margin:0;
-  width: 780px;
+  width: 820px;
   background: linear-gradient(135deg,var(--bg1),var(--bg2));
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
   color: var(--text);
@@ -82,6 +82,7 @@ body{
   justify-content:space-between;
   align-items:center;
   margin-bottom:8px;
+  gap:12px;
 }
 
 .panelTitle{ font-weight:900; }
@@ -192,5 +193,95 @@ tbody td{
   display:none;
   padding:14px;
   color: var(--muted);
+  font-size:12px;
+}
+
+/* NEW: today + leaderboard */
+.todayRow{
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  gap:10px;
+  margin-top:10px;
+}
+
+.todayCard, .leaderCard{
+  border:1px solid var(--border);
+  background:#fff;
+  border-radius:14px;
+  padding:12px;
+}
+
+.todayLabel{
+  font-size:12px;
+  color: var(--muted);
+  font-weight:800;
+}
+
+.todayValue{
+  font-size:16px;
+  font-weight:900;
+  margin-top:6px;
+}
+
+.todayHint{
+  font-size:12px;
+  color: var(--muted);
+  margin-top:4px;
+}
+
+.leaderList{
+  margin-top:8px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.leaderItem{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border:1px solid rgba(10,20,30,0.06);
+  border-radius:12px;
+  padding:8px 10px;
+  font-size:12px;
+  background:#fff;
+}
+
+.leaderLeft{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+
+.leaderHost{
+  font-weight:900;
+}
+
+.leaderMeta{
+  color: var(--muted);
+  font-size:11px;
+}
+
+.dailyControls{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.toggle{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  font-size:12px;
+  font-weight:800;
+  color: var(--muted);
+}
+
+.select{
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:8px 10px;
+  background:#fff;
+  font-weight:800;
   font-size:12px;
 }
