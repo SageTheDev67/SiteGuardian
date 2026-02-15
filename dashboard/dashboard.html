@@ -7,68 +7,79 @@
   <link rel="stylesheet" href="dashboard.css" />
 </head>
 <body>
+  <div class="bgGlow"></div>
+
   <div class="app">
     <header class="topbar">
       <div class="brand">
-        <div class="brandMark">🛡</div>
-        <div>
+        <div class="brandMark" aria-hidden="true">🛡</div>
+        <div class="brandText">
           <div class="brandName">SiteGuardian</div>
           <div class="brandSub">Know what’s stored. Take control.</div>
         </div>
       </div>
-      <div class="pill" id="avgTrustPill">Avg Trust 100%</div>
+
+      <div class="rightPills">
+        <div class="pill" id="avgTrustPill">Avg Trust 100%</div>
+      </div>
     </header>
 
     <section class="metricGrid">
-      <div class="metricCard">
+      <div class="metricCard cardHover">
         <div class="metricLabel">Total Trackers</div>
         <div class="metricValue" id="mTrackers">0</div>
         <div class="metricHint">Matches in last 7 days</div>
       </div>
-      <div class="metricCard">
+
+      <div class="metricCard cardHover">
         <div class="metricLabel">Stored Data</div>
         <div class="metricValue" id="mStorage">0 KB</div>
         <div class="metricHint">Across tracked sites</div>
       </div>
-      <div class="metricCard">
+
+      <div class="metricCard cardHover">
         <div class="metricLabel">Third-Party Cookies</div>
         <div class="metricValue" id="m3p">0</div>
         <div class="metricHint">Estimated</div>
       </div>
-      <div class="metricCard">
+
+      <div class="metricCard cardHover">
         <div class="metricLabel">Sites Tracked</div>
         <div class="metricValue" id="mSites">0</div>
         <div class="metricHint">Seen recently</div>
       </div>
     </section>
 
-    <section class="panel">
+    <section class="panel cardHover">
       <div class="panelHead">
         <div>
           <div class="panelTitle">Activity</div>
           <div class="panelSub">Storage trend (selected site)</div>
         </div>
-        <div class="segmented">
-          <button class="segBtn active" data-range="7">7d</button>
-          <button class="segBtn" data-range="30">30d</button>
+        <div class="segmented" role="tablist" aria-label="History range">
+          <button class="segBtn active" data-range="7" role="tab">7d</button>
+          <button class="segBtn" data-range="30" role="tab">30d</button>
         </div>
       </div>
-      <canvas id="chart" height="140"></canvas>
+      <div class="chartWrap">
+        <canvas id="chart" height="140"></canvas>
+      </div>
     </section>
 
-    <!-- NEW: Today + Leaderboard + Daily report toggle -->
-    <section class="panel">
+    <section class="panel cardHover">
       <div class="panelHead">
         <div>
           <div class="panelTitle">Today</div>
           <div class="panelSub">Worst site visited today + global risk leaderboard</div>
         </div>
+
         <div class="dailyControls">
           <label class="toggle">
             <input type="checkbox" id="dailyToggle" />
             <span>Daily report</span>
           </label>
-          <select id="dailyHour" class="select">
+
+          <select id="dailyHour" class="select" aria-label="Daily report hour">
             <option value="0">00:00</option><option value="1">01:00</option><option value="2">02:00</option><option value="3">03:00</option>
             <option value="4">04:00</option><option value="5">05:00</option><option value="6">06:00</option><option value="7">07:00</option>
             <option value="8">08:00</option><option value="9">09:00</option><option value="10">10:00</option><option value="11">11:00</option>
@@ -79,14 +90,14 @@
         </div>
       </div>
 
-      <div class="todayRow">
-        <div class="todayCard">
+      <div class="todayStack">
+        <div class="todayCard cardHover" id="worstTodayCard">
           <div class="todayLabel">Worst site visited today</div>
           <div class="todayValue" id="worstTodayMain">—</div>
           <div class="todayHint" id="worstTodayMeta">—</div>
         </div>
 
-        <div class="leaderCard">
+        <div class="leaderCard cardHover">
           <div class="todayLabel">Global ranking leaderboard (worst first)</div>
           <div id="leaderList" class="leaderList"></div>
         </div>
@@ -95,13 +106,13 @@
 
     <section class="toolbar">
       <input id="search" placeholder="Filter websites..." />
-      <div class="tabs">
-        <button class="tab active" data-tab="tracked">Tracked</button>
-        <button class="tab" data-tab="excluded">Excluded</button>
+      <div class="tabs" role="tablist" aria-label="Tabs">
+        <button class="tab active" data-tab="tracked" role="tab">Tracked</button>
+        <button class="tab" data-tab="excluded" role="tab">Excluded</button>
       </div>
     </section>
 
-    <section class="tableWrap">
+    <section class="tableWrap cardHover">
       <table class="table">
         <thead>
           <tr>
