@@ -1,1 +1,40 @@
+{
+  "name": "SiteGuardian",
+  "description": "Monitors and clears hidden site data (cookies + storage) per website.",
+  "version": "0.1.0",
+  "manifest_version": 3,
 
+  "action": {
+    "default_title": "SiteGuardian Dashboard",
+    "default_popup": "dashboard/dashboard.html"
+  },
+
+  "background": {
+    "service_worker": "service_worker.js",
+    "type": "module"
+  },
+
+  "permissions": [
+    "storage",
+    "cookies",
+    "tabs"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"],
+      "run_at": "document_start"
+    }
+  ],
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
