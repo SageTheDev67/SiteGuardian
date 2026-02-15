@@ -14,9 +14,10 @@ const chartCanvas = document.getElementById("chart");
 const rangeBtns = [...document.querySelectorAll(".segBtn")];
 const tabBtns = [...document.querySelectorAll(".tab")];
 
-// New
 const worstTodayMain = document.getElementById("worstTodayMain");
 const worstTodayMeta = document.getElementById("worstTodayMeta");
+const worstTodayCard = document.getElementById("worstTodayCard");
+
 const leaderList = document.getElementById("leaderList");
 const dailyToggle = document.getElementById("dailyToggle");
 const dailyHour = document.getElementById("dailyHour");
@@ -34,9 +35,15 @@ function fmtKB(kb){
 }
 
 function trustColor(trust){
-  if (trust >= 80) return "#16a34a";
-  if (trust >= 50) return "#ca8a04";
-  return "#dc2626";
+  if (trust >= 80) return "#22c55e";
+  if (trust >= 50) return "#f59e0b";
+  return "#ef4444";
+}
+
+function riskClass(trust){
+  if (trust >= 80) return "good";
+  if (trust >= 50) return "mid";
+  return "bad";
 }
 
 // Instant update: snapshot now on popup open
@@ -108,23 +115,29 @@ function renderTodayAndLeaderboard(){
   const hour = state?.settings?.dailyReportHourLocal ?? 9;
   dailyHour.value = String(hour);
 
-  // Worst today
+  // Worst today + glow
+  worstTodayCard.classList.remove("riskGlow", "good", "mid", "bad");
+
   if (!worstToday) {
     worstTodayMain.textContent = "—";
     worstTodayMeta.textContent = "No sites visited today yet.";
   } else {
     const c = trustColor(worstToday.trust);
-    worstTodayMain.innerHTML = `<span style="color:${c}">${worstToday.hostname}</span> (${worstToday.trust}/100)`;
+    worstTodayMain.innerHTML = `<span style="color:${c}; font-weight:950">${worstToday.hostname}</span> (${worstToday.trust}/100)`;
     worstTodayMeta.textContent = `Trackers (7d): ${worstToday.trackers7d}  •  Storage: ${worstToday.storageKB} KB`;
+
+    worstTodayCard.classList.add("riskGlow", riskClass(worstToday.trust));
   }
 
-  // Leaderboard list
+  // Leaderboard list + glow per item
   leaderList.innerHTML = "";
   const list = (leaderboard || []).slice(0, 10);
   for (const item of list) {
     const c = trustColor(item.trust);
+    const r = riskClass(item.trust);
+
     const html = `
-      <div class="leaderItem">
+      <div class="leaderItem riskGlow ${r}">
         <div class="leaderLeft">
           <div class="leaderHost" style="color:${c}">${item.hostname}</div>
           <div class="leaderMeta">Trackers: ${item.trackers7d} • Storage: ${item.storageKB} KB</div>
@@ -263,5 +276,5 @@ dailyHour.addEventListener("change", async () => {
   await refreshInstant();
 });
 
-// Run instant snapshot & render
+// Instant snapshot + render
 refreshInstant();
