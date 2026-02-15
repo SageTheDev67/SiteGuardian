@@ -5,7 +5,8 @@
   "manifest_version": 3,
 
   "action": {
-    "default_popup": "dashboard/dashboard.html"
+    "default_popup": "dashboard/dashboard.html",
+    "default_title": "SiteGuardian"
   },
 
   "background": {
@@ -29,7 +30,14 @@
     "rule_resources": [
       { "id": "t1", "enabled": true, "path": "rules/tracker_rules_1.json" },
       { "id": "t2", "enabled": true, "path": "rules/tracker_rules_2.json" },
-      { "id": "t3", "enabled": true, "path": "rules/tracker_rules_3.json" }
+      { "id": "t3", "enabled": true, "path": "rules/tracker_rules_3.json" },
+      { "id": "t4", "enabled": true, "path": "rules/tracker_rules_4.json" },
+      { "id": "t5", "enabled": true, "path": "rules/tracker_rules_5.json" },
+      { "id": "t6", "enabled": true, "path": "rules/tracker_rules_6.json" },
+      { "id": "t7", "enabled": true, "path": "rules/tracker_rules_7.json" },
+      { "id": "t8", "enabled": true, "path": "rules/tracker_rules_8.json" },
+      { "id": "t9", "enabled": true, "path": "rules/tracker_rules_9.json" },
+      { "id": "t10", "enabled": true, "path": "rules/tracker_rules_10.json" }
     ]
   },
 
