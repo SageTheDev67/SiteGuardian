@@ -1,1 +1,8 @@
-
+{
+  "name": "siteguardian",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:rules": "node scripts/build_rules.mjs"
+  }
+}
