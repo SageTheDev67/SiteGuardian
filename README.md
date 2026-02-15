@@ -52,7 +52,7 @@ SiteGuardian calculates a **Trust Score (0–100)** using weighted signals like:
 
 ---
 
-## 🧠 How It Works (Baby-Simple)
+## 🧠 How It Works 
 
 1. 🧾 SiteGuardian loads a big tracker ruleset (split into 10 chunks)
 2. 🌐 Chrome reports when a request matches one of those tracker rules
